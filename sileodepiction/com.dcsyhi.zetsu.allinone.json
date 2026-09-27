@@ -11,13 +11,37 @@
           "class": "DepictionMarkdownView",
           "markdown": "分屏浮窗 + Activator 手势 + 激活闸门，一个包装完，**不需要**再单独装 Activator 或 RocketBootstrap。"
         },
-        { "class": "DepictionSeparatorView" },
-        { "class": "DepictionTableTextView", "title": "版本", "text": "1.3.9" },
-        { "class": "DepictionTableTextView", "title": "作者", "text": "我真的没病" },
-        { "class": "DepictionTableTextView", "title": "兼容", "text": "iOS 15.0 – 16.7" },
-        { "class": "DepictionTableTextView", "title": "架构", "text": "iphoneos-arm64（无根越狱）" },
-        { "class": "DepictionTableTextView", "title": "体积", "text": "约 10 MB" },
-        { "class": "DepictionSeparatorView" },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "版本",
+          "text": "1.3.9"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "作者",
+          "text": "我真的没病"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "兼容",
+          "text": "iOS 15.0 – 16.7"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "架构",
+          "text": "iphoneos-arm64（无根越狱）"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "体积",
+          "text": "约 10 MB"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
         {
           "class": "DepictionMarkdownView",
           "markdown": "#### 装完怎么用\n- 摇一摇手机 → 弹出分屏浮窗\n- 状态栏右侧双击 → 显示 / 隐藏浮窗\n- 设置 → 没病窗口工具 → 快捷分屏，可以自己改手势\n- 第一次使用会让你先激活，激活一次永久可用"
@@ -27,17 +51,6 @@
           "markdown": "> 本插件只在「我真的没病」源里提供，只能通过 Sileo / Zebra 安装。"
         }
       ]
-    },
-    {
-      "tabname": "更新日志",
-      "class": "DepictionStackView",
-      "views": [
-        {
-          "class": "DepictionMarkdownView",
-          "markdown": "#### 1.3.9\n- 修好「创建窗口」和「窗口显示与隐藏」点进去报错的问题\n- 恢复「设置 → Activator」入口\n\n#### 1.3.8\n- 连着注销几次后手势全部失效 → 每 2 分钟自查一次，最多两分钟自己恢复\n- 装好了摇一摇没反应 → 引擎开关丢了会自动补回来\n- 装完手势就是配好的，不用再去 Activator 里手动配"
-        }
-      ]
     }
   ]
 }
-
