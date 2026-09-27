@@ -22,6 +22,7 @@ import tarfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 DEBS_DIR = os.path.join(ROOT, 'debs')
+DEPICTIONS_CONF = os.path.join(ROOT, 'depictions.conf')
 
 QUOTE = chr(34)
 APOSTROPHE = chr(39)
@@ -47,6 +48,41 @@ def read_conf(path):
                 val = val[1:-1]
             conf[key.strip()] = val
     return conf
+
+
+def absolute_url(value, base_url):
+    """相对地址补上源根地址"""
+    if value.startswith('http://') or value.startswith('https://'):
+        return value
+    if not base_url:
+        return value
+    return base_url.rstrip('/') + '/' + value.lstrip('/')
+
+
+def read_depictions(path, base_url):
+    """读取 depictions.conf，返回 {包名: [(字段名, 地址), ...]}
+
+    每行一个包：包名 = Depiction 地址 | SileoDepiction 地址
+    地址写相对路径就行，也允许只写其中一个，另一个留空。
+    """
+    mapping = {}
+    if not os.path.exists(path):
+        return mapping
+    with open(path, 'r', encoding='utf-8-sig') as fh:
+        for line in fh:
+            line = line.strip()
+            if not line or line.startswith('#') or '=' not in line:
+                continue
+            key, _sep, val = line.partition('=')
+            parts = [part.strip() for part in val.split('|')]
+            fields = []
+            if parts and parts[0]:
+                fields.append(('Depiction', absolute_url(parts[0], base_url)))
+            if len(parts) > 1 and parts[1]:
+                fields.append(('SileoDepiction', absolute_url(parts[1], base_url)))
+            if fields:
+                mapping[key.strip()] = fields
+    return mapping
 
 
 def ar_members(blob):
@@ -122,7 +158,7 @@ def split_fields(text):
     return result
 
 
-def make_stanza(deb_path, rel_path):
+def make_stanza(deb_path, rel_path, depictions=None):
     """把一个 deb 变成 Packages 里的一段"""
     with open(deb_path, 'rb') as fh:
         blob = fh.read()
@@ -141,6 +177,15 @@ def make_stanza(deb_path, rel_path):
         elif low == 'version':
             version = block.partition(':')[2].strip()
         normal.append(block)
+
+    # 详情页地址：depictions.conf 里配过的以配置为准，覆盖 deb 自带的
+    extra = (depictions or {}).get(name, [])
+    if extra:
+        overridden = {key.lower() for key, _value in extra}
+        normal = [block for block in normal
+                  if block.partition(':')[0].strip().lower() not in overridden]
+        for key, value in extra:
+            normal.append('%s: %s' % (key, value))
 
     # 按 Debian 惯例：路径、大小、校验和放在 Description 之前
     normal.append('Filename: %s' % rel_path.replace(os.sep, '/'))
@@ -176,6 +221,7 @@ def build_release(conf):
 
 def main():
     conf = read_conf(os.path.join(ROOT, 'repo.conf'))
+    depictions = read_depictions(DEPICTIONS_CONF, conf.get('REPO_URL', ''))
     if not os.path.isdir(DEBS_DIR):
         os.makedirs(DEBS_DIR)
 
@@ -185,7 +231,7 @@ def main():
             continue
         deb_path = os.path.join(DEBS_DIR, entry)
         try:
-            stanzas.append(make_stanza(deb_path, os.path.join('debs', entry)))
+            stanzas.append(make_stanza(deb_path, os.path.join('debs', entry), depictions))
         except Exception as err:  # 单个包有问题不该拖垮整个源
             problems.append('%s - %s' % (entry, err))
 
