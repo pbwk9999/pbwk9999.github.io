@@ -9,7 +9,7 @@
       "views": [
         {
           "class": "DepictionMarkdownView",
-          "markdown": "分屏浮窗 + Activator 手势 + 激活闸门，一个包装完，**不需要**再单独装 Activator 或 RocketBootstrap。"
+          "markdown": "分屏浮窗 + Activator 手势，一个包装完，**不需要**再单独装 Activator 或 RocketBootstrap：博主只想挣点零花钱。"
         },
         {
           "class": "DepictionSeparatorView"
