@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>没病窗口工具 · 我真的没病</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; padding: 20px 16px 40px; font-size: 15px; line-height: 1.7;
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+    background: #0b0d14; color: #f2f4f8;
+  }
+  .wrap { max-width: 560px; margin: 0 auto; }
+  .head { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  .head img { width: 64px; height: 64px; border-radius: 16px; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .meta { color: #9aa3b8; font-size: 13px; }
+  .box {
+    padding: 16px; border-radius: 16px; margin-bottom: 14px;
+    background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.09);
+  }
+  .row { display: flex; justify-content: space-between; gap: 12px; padding: 7px 0; font-size: 14px; }
+  .row span:first-child { color: #9aa3b8; }
+  .row span:last-child { text-align: right; }
+  ul { padding-left: 20px; margin: 8px 0 0; }
+  .install {
+    display: block; text-align: center; padding: 14px 16px; border-radius: 14px;
+    font-weight: 600; text-decoration: none; color: #fff;
+    background: linear-gradient(135deg, #4b6bff, #7d4bff); margin-bottom: 14px;
+  }
+  .tag { display: inline-block; padding: 2px 8px; border-radius: 8px; font-size: 12px;
+    background: rgba(75, 107, 255, 0.22); color: #a9b8ff; }
+  .foot { font-size: 12px; color: #7d879c; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <img src="../../CydiaIcon.png" alt="源图标">
+    <div>
+      <h1>没病窗口工具</h1>
+      <div class="meta">com.dcsyhi.zetsu.allinone · 来自「我真的没病」源</div>
+    </div>
+  </div>
+  <a class="install" href="sileo://package/com.dcsyhi.zetsu.allinone">在 Sileo 里安装</a>
+  <div class="box">
+    <p style="margin:0">分屏浮窗 + Activator 手势 + 激活闸门，一个包装完，不需要再单独装 Activator 或 RocketBootstrap。</p>
+  </div>
+  <div class="box">
+    <div class="row"><span>版本</span><span>1.3.9</span></div>
+    <div class="row"><span>作者</span><span>我真的没病</span></div>
+    <div class="row"><span>兼容</span><span>iOS 15.0 – 16.7</span></div>
+    <div class="row"><span>架构</span><span>iphoneos-arm64（无根越狱）</span></div>
+    <div class="row"><span>体积</span><span>约 10 MB</span></div>
+  </div>
+  <div class="box">
+    <strong>装完怎么用</strong>
+    <ul>
+      <li>摇一摇手机 → 弹出分屏浮窗</li>
+      <li>状态栏右侧双击 → 显示 / 隐藏浮窗</li>
+      <li>设置 → 没病窗口工具 → 快捷分屏，可以自己改手势</li>
+      <li>第一次使用会让你先激活，激活一次永久可用</li>
+    </ul>
+  </div>
+  <div class="box">
+    <strong>更新日志</strong>
+    <ul>
+      <li>1.3.9 · 修好「创建窗口」「窗口显示与隐藏」点进去报错；恢复「设置 → Activator」入口</li>
+      <li>1.3.8 · 手势失效自愈、引擎开关自动补回、手势装完即配好</li>
+    </ul>
+  </div>
+  <p class="foot"><span class="tag">只能通过 Sileo / Zebra 安装</span></p>
+</div>
+</body>
+</html>
+
