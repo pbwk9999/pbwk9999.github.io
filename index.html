@@ -39,6 +39,14 @@
     font-size: 13px; font-weight: 600; color: #fff; background: rgba(255, 255, 255, 0.16);
   }
   .hint { margin: 0; font-size: 12px; line-height: 1.6; color: #7d879c; }
+  .divider { height: 1px; margin: 22px 0 16px; border: 0; background: rgba(255, 255, 255, 0.1); }
+  .pkg { text-align: left; padding: 16px; border-radius: 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.08); }
+  .pkg-top { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; }
+  .pkg-name { font-size: 16px; font-weight: 600; }
+  .pkg-ver { font-size: 12px; color: #9aa3b8; }
+  .pkg-desc { margin: 8px 0 14px; font-size: 13px; line-height: 1.6; color: #9aa3b8; }
+  .btn.small { padding: 11px 14px; margin-bottom: 0; font-size: 14px; }
+  .note { margin: 12px 0 0; font-size: 12px; line-height: 1.6; color: #7d879c; }
 </style>
 </head>
 <body>
@@ -54,6 +62,16 @@
     <button id="copy" type="button">复制</button>
   </div>
   <p class="hint">按钮没反应的话，把上面的地址复制到 Sileo 的「来源 → 添加」里手动加。</p>
+  <hr class="divider">
+  <div class="pkg">
+    <div class="pkg-top">
+      <span class="pkg-name">没病窗口工具</span>
+      <span class="pkg-ver">v1.3.9</span>
+    </div>
+    <p class="pkg-desc">分屏浮窗 + Activator 手势 + 激活闸门，iOS 15.0 – 16.7（arm64 无根越狱）。</p>
+    <a class="btn primary small" href="sileo://package/com.dcsyhi.zetsu.allinone">在 Sileo 里安装</a>
+  </div>
+  <p class="note">源里的插件不提供单独下载，只能在 Sileo / Zebra 里添加本源后安装。</p>
 </main>
 <script>
   var btn = document.getElementById('copy');
