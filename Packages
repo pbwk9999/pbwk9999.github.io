@@ -18,3 +18,24 @@ MD5sum: 6c74eefe5a61ee3617ca3642ef706d39
 SHA1: 2251b03c94174de37158cdaf990f070502cc5442
 SHA256: 1d055e359e8b07728bfcdc9b2b44b5ed61a319aad3c2e3d8b49ead4a21f0e995
 Description: 没病五开请加微信：pbwk9999
+
+Package: com.dcsyhi.zetsu.allinone
+Name: 没病窗口工具
+Version: 1.4.0
+Architecture: iphoneos-arm64
+Section: Tweaks
+Priority: optional
+Maintainer: 我真的没病
+Depends: firmware (>= 15.0) | ellekit (>= 1.0), ellekit (>= 1.0) | mobilesubstrate, preferenceloader, ws.hbang.common (>= 2.0), com.opa334.ccsupport
+Provides: libactivator, cn.yttxcs.zetsu, libdeusprefs, rocketbootstrap
+Conflicts: libactivator, cn.yttxcs.zetsu, com.dcsyhi.zetsu.rootless-fix, com.rpetrich.rocketbootstrap, com.lacertosusrepo.libdeusprefs, jp.dcsyhi.zetsu
+Replaces: libactivator, cn.yttxcs.zetsu, com.dcsyhi.zetsu.rootless-fix, com.rpetrich.rocketbootstrap, com.lacertosusrepo.libdeusprefs, jp.dcsyhi.zetsu
+Tag: compatible_min::ios17.0, compatible_max::ios17.3.1
+Depiction: https://pbwk9999.github.io/depictions/com.dcsyhi.zetsu.allinone/
+SileoDepiction: https://pbwk9999.github.io/sileodepiction/com.dcsyhi.zetsu.allinone.json
+Filename: debs/com.dcsyhi.zetsu.allinone_1.4.0_iphoneos-arm64.deb
+Size: 10444556
+MD5sum: 6ce2cdcf9aae73e9f5a03019146c84ef
+SHA1: ea21dc5e13c2398195a40b5b68add1a137ddb66b
+SHA256: 6014cc79784ccfdd60aa19f6bf6fbbacfdebb0ade48e40180e198fcde7a4ec8e
+Description: 没病五开请加微信：pbwk9999
