@@ -21,7 +21,7 @@ Description: 没病五开请加微信：pbwk9999
 
 Package: com.dcsyhi.zetsu.allinone17
 Name: 没病窗口工具 17
-Version: 1.4.0
+Version: 1.4.2
 Architecture: iphoneos-arm64
 Section: Tweaks
 Priority: optional
@@ -33,9 +33,9 @@ Replaces: com.dcsyhi.zetsu.allinone, libactivator, cn.yttxcs.zetsu, com.dcsyhi.z
 Tag: compatible_min::ios17.0, compatible_max::ios17.3.1
 Depiction: https://pbwk9999.github.io/depictions/com.dcsyhi.zetsu.allinone17/
 SileoDepiction: https://pbwk9999.github.io/sileodepiction/com.dcsyhi.zetsu.allinone17.json
-Filename: debs/com.dcsyhi.zetsu.allinone17_1.4.0_iphoneos-arm64.deb
-Size: 10443676
-MD5sum: 559d62d4a91d8888e4eb6fd6f7423357
-SHA1: d5cb95f52545c461ef1417e9ed17eb24a66f23a6
-SHA256: 87600d55bce8b8788ccaa4106002d8a4b2e730072a3114cf038b9ac140472320
+Filename: debs/com.dcsyhi.zetsu.allinone17_1.4.2_iphoneos-arm64.deb
+Size: 10437628
+MD5sum: 92134cdd21ee6001a9ebaa513062d1d4
+SHA1: f27d7c2cc36b8bdccff917c68fb0efdfe5b5fcff
+SHA256: bce4475201b3460218a987249f21c949f421c4f53231a29390bc986dfc3a9494
 Description: 没病五开请加微信：pbwk9999
