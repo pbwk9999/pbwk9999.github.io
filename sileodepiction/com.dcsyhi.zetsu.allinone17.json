@@ -1,0 +1,56 @@
+{
+  "class": "DepictionTabView",
+  "minVersion": "0.4",
+  "tintColor": "#4B6BFF",
+  "tabs": [
+    {
+      "tabname": "详情",
+      "class": "DepictionStackView",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "分屏浮窗 + Activator 手势，一个包装完，**不需要**再单独装 Activator 或 RocketBootstrap：博主只想挣点零花钱。"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "版本",
+          "text": "1.4.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "作者",
+          "text": "我真的没病"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "兼容",
+          "text": "iOS 17.0 – 17.3.1"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "架构",
+          "text": "iphoneos-arm64（无根越狱）"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "体积",
+          "text": "约 10 MB"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "#### 装完怎么用\n- 摇一摇手机 → 弹出分屏浮窗\n- 状态栏右侧双击 → 显示 / 隐藏浮窗\n- 设置 → 没病窗口工具 → 快捷分屏，可以自己改手势\n- 第一次使用会让你先激活，激活一次永久可用"
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "> 本插件只在「我真的没病」源里提供，只能通过 Sileo / Zebra 安装。"
+        }
+      ]
+    }
+  ]
+}
